@@ -14,9 +14,9 @@ function Home() {
                     <Product title="OnePlus Bullets Wireless Z(Blue)" rating={4}
                         image="https://images-eu.ssl-images-amazon.com/images/I/41ZyVq9XciL._AC_SY200_.jpg" price={1999} />
                     <Product title="Apple IPhone 11" rating={5}
-                        image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTJgmvWi0Xab60QEMH_naBnP9esWuosBCBX7hagZgMVKwBJ_C84mT3kWdK-Lf5cvxdjLsgiHbz9piE&usqp=CAc" price={70000} />
+                        image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTJgmvWi0Xab60QEMH_naBnP9esWuosBCBX7hagZgMVKwBJ_C84mT3kWdK-Lf5cvxdjLsgiHbz9piE&usqp=CAc" price={69999} />
                     <Product title="Apple Airpods 2" rating={4}
-                        image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTZ40ySbWRPctWmPt-RTi72yoyumFyJ5RFD8rn3SbE5S8vyjF1gRspMlZOBZi5PqnVhqkZybr6ynrw&usqp=CAc" price={23000} />
+                        image="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTZ40ySbWRPctWmPt-RTi72yoyumFyJ5RFD8rn3SbE5S8vyjF1gRspMlZOBZi5PqnVhqkZybr6ynrw&usqp=CAc" price={22999} />
 
                     {/* Product */}
                 </div>
@@ -24,9 +24,9 @@ function Home() {
                 <div className="home__row">
                     {/* Product */}
                     <Product title="OnePlus Buds" rating={4}
-                        image="https://images-na.ssl-images-amazon.com/images/I/61-COaSmn3L._SL1500_.jpg" price={1999} />
+                        image="https://images-na.ssl-images-amazon.com/images/I/61-COaSmn3L._SL1500_.jpg" price={4990} />
                     <Product title="OnePlus Nord" rating={4}
-                        image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpSF9s1M84MZ63-x3U64VU1alEQFljTZPtH468x6DilU9xyKRcBT7yjc5OUMV7NLw5kPTE5CDTwg&usqp=CAc" price={1999} />
+                        image="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpSF9s1M84MZ63-x3U64VU1alEQFljTZPtH468x6DilU9xyKRcBT7yjc5OUMV7NLw5kPTE5CDTwg&usqp=CAc" price={27999} />
                     {/* Product */}
                     {/* Product */}
                 </div>
