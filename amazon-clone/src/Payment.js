@@ -25,6 +25,12 @@ function Payment() {
     const history = useHistory()
 
     useEffect(() => {
+        if (!user) {
+            history.push('./loginpage')
+        }
+    }, [])
+
+    useEffect(() => {
         const getClientSecret = async () => {
 
             const response = await axios({
