@@ -3,6 +3,12 @@ export const initialState = {
     user: null,
 }
 
+export const getBasketTotal = (basket) => {
+    return (basket.reduce((total, eachDict) => {
+        return total + eachDict?.price
+    }, 0))
+}
+
 export const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_BASKET':

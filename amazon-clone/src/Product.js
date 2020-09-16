@@ -1,4 +1,5 @@
 import React from 'react'
+import CurrencyFormat from 'react-currency-format'
 import './Product.css'
 import { useStateProvider } from './StateProvider'
 function Product({ id, title, image, price, rating }) {
@@ -25,14 +26,25 @@ function Product({ id, title, image, price, rating }) {
                 <p>{title}</p>
 
                 {/* Price */}
-                <p className="product__price">
-                    <small>₹</small>
-                    <strong>{price}</strong>
-                </p>
+                <CurrencyFormat renderText={(value) => (
+                    <>
+                        <p className="product__price">
+                            {/* <small>₹</small> */}
+                            <strong>{value}</strong>
+                        </p>
+                    </>
+                )}
+                    decimalScale={2}
+                    value={price}
+                    displayType={"text"}
+                    thousandSeparator={true}
+                    prefix={"₹"}
+                />
+
 
                 {/* Rating */}
                 <div className="product__rating">
-                    {Array(rating).fill().map((_, i) => (<p>$</p>))}
+                    {Array(rating).fill().map((_, i) => (<p>★</p>))}
 
                 </div>
             </div>
@@ -43,7 +55,7 @@ function Product({ id, title, image, price, rating }) {
 
 
 
-        </div>
+        </div >
     )
 }
 

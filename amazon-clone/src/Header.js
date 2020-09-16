@@ -13,11 +13,9 @@ function Header() {
     const handleLoginLogout = () => {
         if (user) {
             auth.signOut()
-            // dispatch({
-            //     type: 'CLEAR_BASKET',
-            //     basket: [],
-            //     user: null,
-            // })
+            dispatch({
+                type: 'CLEAR_BASKET'
+            })
         }
     }
     return (
@@ -35,28 +33,32 @@ function Header() {
                 <SearchIcon className="header__seachIcon" />
             </div>
 
-            <div className="header__nav" onClick={handleLoginLogout}>
-                <Link to="/loginpage">
+            <div className="header__nav" >
+                <div onClick={handleLoginLogout}>
+                    <Link to={!user && "/loginpage"}>
+                        <div className="header__option">
+                            <span className="header__optionLineOne">
+                                Hello {user ? user?.email : 'Guest'}
+                            </span>
+                            <span className="header__optionLineTwo">
+                                {user ? 'Sign Out' : 'Sign In'}
+                            </span>
+
+                        </div>
+                    </Link>
+                </div>
+
+                <Link to="/orders">
                     <div className="header__option">
                         <span className="header__optionLineOne">
-                            Hello {user ? user?.email : 'Guest'}
-                        </span>
-                        <span className="header__optionLineTwo">
-                            {user ? 'Sign Out' : 'Sign In'}
-                        </span>
+                            Returns
+                    </span>
 
+                        <span className="header__optionLineTwo">
+                            & Orders
+                    </span>
                     </div>
                 </Link>
-
-                <div className="header__option">
-                    <span className="header__optionLineOne">
-                        Returns
-                    </span>
-
-                    <span className="header__optionLineTwo">
-                        & Orders
-                    </span>
-                </div>
 
                 <div className="header__option">
                     <span className="header__optionLineOne">

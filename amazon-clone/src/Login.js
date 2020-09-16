@@ -1,5 +1,5 @@
 import { Link } from '@material-ui/core'
-import { auth } from './firebase'
+import { auth, db } from './firebase'
 import React, { useState } from 'react'
 import './Login.css'
 import { useHistory } from 'react-router-dom'
@@ -15,7 +15,7 @@ function Login() {
         auth.signInWithEmailAndPassword(Username, Password).then(auth => {
             console.log(auth);
             if (auth) {
-
+                // console.log(db.collection("users").doc(auth.user.uid))
                 history.push('/')
             }
 
@@ -29,6 +29,9 @@ function Login() {
             .then(auth => {
                 console.log(auth)
                 if (auth) {
+                    // db.collection("users").doc(auth.user.uid).set(
+                    //     { user: auth.user }
+                    // )
                     history.push('/')
                 }
             })
